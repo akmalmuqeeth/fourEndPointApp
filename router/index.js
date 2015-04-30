@@ -3,4 +3,5 @@ var passport = require('../auth'),
 
 module.exports = function (app) {
     app.use('/api/login', require('./routes/login'));
+    app.use('/api/users', require('./routes/users'));
 };
