@@ -4,18 +4,24 @@ var express = require('express')
     , logger = require('nlogger').logger(module)
 
 router.post('/', function login (req,res) {
-    logger.info("attempting to authenticate user", req.body);
+    logger.info("login user with credentials - ", req.body);
     passport.authenticate('local', function(err, user, info) {
-        if (err)
+        if (err) {
+            logger.debug("login failed - credentials - ", req.body + '. Error - ' + err);
             return res.status(500).end();
-        if (!user)
+        }
+
+        if (!user) {
+            logger.debug("login attempt with invalid credentials - ", req.body);
             return res.status(404).send(info);
+        }
 
         /* user is authenticated at this point but a cookie is not created,
          the login method in the request object serializes the user
          and creates the cookie */
         req.logIn(user, function(err) {
             if (err) {
+                logger.debug("error creating cookie - ", err);
                 return res.status(500).end();
             }
 
