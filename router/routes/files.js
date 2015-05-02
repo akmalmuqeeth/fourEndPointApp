@@ -1,10 +1,17 @@
 var express = require('express')
     , router = express.Router()
     , logger = require('nlogger').logger(module)
-    , path = require('path');
+    , path = require('path')
+    , fs = require('fs');
 
 router.get('/:directory', function getFiles(req,res){
-    return res.sendFile(path.join(__dirname, '../../' + req.params.directory, 'index.js'));
+    var location = path.join(__dirname, '../../' + req.params.directory);
+    fs.readdir(location, function (err, files) {
+        if (err) {
+            throw err;
+        }
+        return res.json({"path" : location, "files" : files});
+    });
 });
 
 module.exports = router;
