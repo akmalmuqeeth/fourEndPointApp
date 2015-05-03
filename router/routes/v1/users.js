@@ -1,7 +1,7 @@
 var express = require('express')
     , router = express.Router()
     , logger = require('nlogger').logger(module)
-    , user = require('../../db').model('User');
+    , user = require('../../../db').model('User');
 
 router.get('/:cityFilter', function getUsers(req,res){
     user.aggregate()

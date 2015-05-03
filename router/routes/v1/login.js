@@ -1,6 +1,6 @@
 var express = require('express')
     , router = express.Router()
-    , passport = require('../../auth')
+    , passport = require('../../../auth')
     , logger = require('nlogger').logger(module)
 
 router.post('/', function login (req,res) {
