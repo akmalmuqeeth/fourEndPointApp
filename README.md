@@ -22,9 +22,13 @@ Show what the library does as concisely as possible, developers should be able t
 **Why Express JS?** : simple routing, sessions and POST body/ query string parsing.
 
 ### versioning
+
+Routes have the following structure:
+
 -- server.js
 -- router/
 -- -- routes/
+-- -- -- index.js
 -- -- -- v1/
 -- -- -- -- files.js
 -- -- -- -- login.js
@@ -35,6 +39,12 @@ Show what the library does as concisely as possible, developers should be able t
 -- -- -- -- login.js
 -- -- -- -- status.js
 -- -- -- -- users.js
+
+index.js contains the route declarations
+    app.use('/api/login', require('./routes/v1/login'));
+
+for the new version we could have the new routes in a directory called 'v2' anf the redeclare the routes as below:
+    app.use('/api/login', require('./routes/v2/login'));
 
 
 
