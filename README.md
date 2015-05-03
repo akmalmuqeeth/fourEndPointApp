@@ -22,6 +22,20 @@ Show what the library does as concisely as possible, developers should be able t
 **Why Express JS?** : simple routing, sessions and POST body/ query string parsing.
 
 ### versioning
+-- server.js
+-- router/
+-- -- routes/
+-- -- -- v1/
+-- -- -- -- files.js
+-- -- -- -- login.js
+-- -- -- -- status.js
+-- -- -- -- users.js
+-- -- -- v2/
+-- -- -- -- files.js
+-- -- -- -- login.js
+-- -- -- -- status.js
+-- -- -- -- users.js
+
 
 
 ### paging
