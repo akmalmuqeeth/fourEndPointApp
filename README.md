@@ -25,20 +25,23 @@ Show what the library does as concisely as possible, developers should be able t
 
 Routes have the following structure:
 
--- server.js
+
 -- router/
+
 -- -- routes/
+
 -- -- -- index.js
+
 -- -- -- v1/
+
 -- -- -- -- files.js
--- -- -- -- login.js
--- -- -- -- status.js
--- -- -- -- users.js
+
+...
+
 -- -- -- v2/
+
 -- -- -- -- files.js
--- -- -- -- login.js
--- -- -- -- status.js
--- -- -- -- users.js
+
 
 index.js contains the route declarations
     app.use('/api/login', require('./routes/v1/login'));
