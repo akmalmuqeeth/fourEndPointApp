@@ -2,9 +2,31 @@
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
+Use the technologies of your choice but please add a small paragraph on why you choose that technology.
+
+- The endpoints have to be able to handle versioning, please explain the strategy on how to accomplish this.
+
+- If you have time please add pagination, if not please describe how the solution would support pagination
+
 ## Design decisions
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+### Why Node JS
+
+<ul>
+    <li>Its fast</li>
+    <li>Quick to prototype REST Api's</li>
+</ul>
+
+**Why Express JS?** : simple routing, sessions and POST body/ query string parsing.
+
+### versioning
+
+
+### paging
+
+
 
 ## Database setup
 
