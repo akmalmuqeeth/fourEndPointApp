@@ -46,7 +46,7 @@ Routes have the following structure:
 index.js contains the route declarations
     app.use('/api/login', require('./routes/v1/login'));
 
-for the new version we could have the new routes in a directory called 'v2' anf the redeclare the routes as below:
+for the new version, we could have the new routes in a directory called 'v2' and then re-declare the routes as below:
     app.use('/api/login', require('./routes/v2/login'));
 
 
