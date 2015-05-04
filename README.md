@@ -103,4 +103,13 @@ for the new version, we could have the new routes in a directory called 'v2' and
 
     ```app.use('/api/login', require('./routes/v2/login'));```
 
-### paging
+### Pagination
+
+The users api might require paging once the database gets larger. 
+
+One way to achieve this is by adding two URL parameters to the API:
+
+size : number of records to return
+pageNumber: depending on the size, which page of data should be returned
+
+UserModel.find(query, fields, { skip: size * pageNumber, limit: size }, function(err, results) { ... });
