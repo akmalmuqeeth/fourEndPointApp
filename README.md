@@ -1,6 +1,4 @@
-## Synopsis
-
-coding exercise - four end points.
+## coding exercise - four endpoints API
 
 - An endpoint that authenticates a user based on a login/password passed in a JSON payload and verifies against a Mongo DB database
 
