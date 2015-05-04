@@ -121,5 +121,5 @@ in the users.js route, we would then use these params
 
 - navigating to the main directory run the tests 
 
-```mocha```
+``` mocha ```
 
