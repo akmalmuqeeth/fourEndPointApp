@@ -22,27 +22,12 @@ database : **userDB**
 
 collection : **users**
 
+#### import database
 mongoimport --db userDB --collection users --type json --file users.json
 
 ### Alternate database setup
 
-If the mongoimport tool does not work, then data can be etered through the mongo shell using th following set of commands :
-
-```db.users.save({"username":"jesse","name":"jesse","password": "jesse", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"adam","name":"adam","password": "adam", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"mike","name":"mike","password": "mike", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"gus","name":"gus","password": "gus", "city":"LA", "profession":"programmer" });
-
-db.users.save({"username":"tuco","name":"tuco","password": "tuco", "city":"DC", "profession":"programmer" });
-
-db.users.save({"username":"marie","name":"marie","password": "marie", "city":"NY", "profession":"manager" });
-
-db.users.save({"username":"hank","name":"hank","password": "hank", "city":"IL", "profession":"waiter" });
-
-db.users.save({"username":"walt","name":"walt","password": "walt", "city":"DC", "profession":"manager" });```
+follow the instructions in manual_db_setup.txt
 
 ## API Reference
 
