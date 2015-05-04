@@ -10,6 +10,12 @@ coding exercise - four end points.
 
 - An endpoint that when called returns the list of files in a given directory.
 
+## Installation
+
+clone the github project : ```git clone https://github.com/akmalmuqeeth/fourEndPointApp.git```
+
+install dependencies : ```navigate to folder and run npm install```
+
 ## Database setup
 
 database : **userDB**
@@ -37,14 +43,6 @@ db.users.save({"username":"marie","name":"marie","password": "marie", "city":"NY
 db.users.save({"username":"hank","name":"hank","password": "hank", "city":"IL", "profession":"waiter" });
 
 db.users.save({"username":"walt","name":"walt","password": "walt", "city":"DC", "profession":"manager" });```
-
-
-## Installation
-
-clone the github project : ```git clone https://github.com/akmalmuqeeth/fourEndPointApp.git```
-
-install dependencies : ```navigate to folder and run npm install```
-
 
 ## API Reference
 
