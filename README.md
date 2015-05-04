@@ -110,4 +110,16 @@ One way to achieve this is by adding two URL parameters to the API:
 size : number of records to return
 pageNumber: depending on the size, which page of data should be returned
 
-UserModel.find(query, fields, { skip: size * pageNumber, limit: size }, function(err, results) { ... });
+in the users.js route, we would then use these params
+
+```UserModel.find(query, fields, { skip: size * pageNumber, limit: size }, function(err, results) { ... });```
+
+### Tests
+- install mocha 
+
+```npm install -g mocha```
+
+- navigating to the main directory run the tests 
+
+```mocha```
+
