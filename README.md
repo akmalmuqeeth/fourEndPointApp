@@ -1,23 +1,34 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+coding exercise - four end points.
 
-Use the technologies of your choice but please add a small paragraph on why you choose that technology.
+- An endpoint that authenticates a user based on a login/password passed in a JSON payload and verifies against a Mongo DB database
 
-- The endpoints have to be able to handle versioning, please explain the strategy on how to accomplish this.
+- An endpoint that returns all users in the database filtered by city and group by profession.
 
-- If you have time please add pagination, if not please describe how the solution would support pagination
+- An endpoint that checks and returns the status of all components that it depends on (Is Mongo still up OK).
+
+- An endpoint that when called returns the list of files in a given directory.
 
 ## Design decisions
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+NodeJS
+
+ExpressJS - web application framework
+
+MongoDB and MongooseJS - database
+
+Passport - authentication
+
+NLogger - logging
+
+Mocha - testing
 
 ### Why Node JS
 
-<ul>
-    <li>Its fast</li>
-    <li>Quick to prototype REST Api's</li>
-</ul>
+- Its fast
+- Quick to prototype REST Api's
+
 
 **Why Express JS?** : simple routing, sessions and POST body/ query string parsing.
 
