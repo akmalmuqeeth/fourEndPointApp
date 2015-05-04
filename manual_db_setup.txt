@@ -1,0 +1,15 @@
+connect to mongod
+    mongod --dbpath <path_to_the_db>
+open mongo shell
+    mongo
+create the db
+    use userDB
+insert rows
+    db.users.save({"username":"jesse","name":"jesse","password": "jesse", "city":"LA", "profession":"designer" });
+    db.users.save({"username":"adam","name":"adam","password": "adam", "city":"LA", "profession":"designer" });
+    db.users.save({"username":"mike","name":"mike","password": "mike", "city":"LA", "profession":"designer" });
+    db.users.save({"username":"gus","name":"gus","password": "gus", "city":"LA", "profession":"programmer" });
+    db.users.save({"username":"tuco","name":"tuco","password": "tuco", "city":"DC", "profession":"programmer" });
+    db.users.save({"username":"marie","name":"marie","password": "marie", "city":"NY", "profession":"manager" });
+    db.users.save({"username":"hank","name":"hank","password": "hank", "city":"IL", "profession":"waiter" });
+    db.users.save({"username":"walt","name":"walt","password": "walt", "city":"DC", "profession":"manager" });
