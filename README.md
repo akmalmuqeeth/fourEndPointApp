@@ -10,6 +10,56 @@ coding exercise - four end points.
 
 - An endpoint that when called returns the list of files in a given directory.
 
+## Database setup
+
+database : **userDB**
+
+collection : **users**
+
+mongoimport --db userDB --collection users --type json --file users.json
+
+### Alternate database setup
+
+If the mongoimport tool does not work, then data can be etered through the mongo shell using th following set of commands :
+
+```db.users.save({"username":"jesse","name":"jesse","password": "jesse", "city":"LA", "profession":"designer" });
+
+db.users.save({"username":"adam","name":"adam","password": "adam", "city":"LA", "profession":"designer" });
+
+db.users.save({"username":"mike","name":"mike","password": "mike", "city":"LA", "profession":"designer" });
+
+db.users.save({"username":"gus","name":"gus","password": "gus", "city":"LA", "profession":"programmer" });
+
+db.users.save({"username":"tuco","name":"tuco","password": "tuco", "city":"DC", "profession":"programmer" });
+
+db.users.save({"username":"marie","name":"marie","password": "marie", "city":"NY", "profession":"manager" });
+
+db.users.save({"username":"hank","name":"hank","password": "hank", "city":"IL", "profession":"waiter" });
+
+db.users.save({"username":"walt","name":"walt","password": "walt", "city":"DC", "profession":"manager" });```
+
+
+## Installation
+
+clone the github project : ```git clone https://github.com/akmalmuqeeth/fourEndPointApp.git```
+
+install dependencies : ```navigate to folder and run npm install```
+
+
+## API Reference
+
+### login
+curl -H "Content-Type: application/json" -X POST -d '{"username":"jesse","password":"jesse"}' http://127.0.0.1:8080/api/login
+
+### users
+curl -i -H "Accept: application/json" "http://127.0.0.1:8080/api/users/DC"
+
+### files
+curl -i -H "Accept: application/json" "http://127.0.0.1:8080/api/files/middlewares"
+
+### status
+curl -i -H "Accept: application/json" "http://127.0.0.1:8080/api/status"
+
 ## Design decisions
 
 NodeJS
@@ -62,61 +112,4 @@ for the new version, we could have the new routes in a directory called 'v2' and
 
     ```app.use('/api/login', require('./routes/v2/login'));```
 
-
-
 ### paging
-
-
-
-## Database setup
-
-database : **userDB**
-
-collection : **users**
-
-mongoimport --db userDB --collection users --type json --file users.json
-
-### Alternate database setup
-
-If the mongoimport tool does not work, then data can be etered through the mongo shell using th following set of commands :
-
-db.users.save({"username":"jesse","name":"jesse","password": "jesse", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"adam","name":"adam","password": "adam", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"mike","name":"mike","password": "mike", "city":"LA", "profession":"designer" });
-
-db.users.save({"username":"gus","name":"gus","password": "gus", "city":"LA", "profession":"programmer" });
-
-db.users.save({"username":"tuco","name":"tuco","password": "tuco", "city":"DC", "profession":"programmer" });
-
-db.users.save({"username":"marie","name":"marie","password": "marie", "city":"NY", "profession":"manager" });
-
-db.users.save({"username":"hank","name":"hank","password": "hank", "city":"IL", "profession":"waiter" });
-
-db.users.save({"username":"walt","name":"walt","password": "walt", "city":"DC", "profession":"manager" });
-
-
-
-## Installation
-
-Provide code examples and explanations of how to get the project.
-
-## API Reference
-
-### login
-### users
-### files
-### status
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
