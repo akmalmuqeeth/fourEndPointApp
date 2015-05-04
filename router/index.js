@@ -1,6 +1,3 @@
-var passport = require('../auth'),
-    logger = require('nlogger').logger(module)
-
 module.exports = function (app) {
     app.use('/api/login', require('./routes/v1/login'));
     app.use('/api/users', require('./routes/v1/users'));
