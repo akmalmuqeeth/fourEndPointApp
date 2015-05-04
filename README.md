@@ -108,6 +108,7 @@ The users api might require paging once the database gets larger.
 One way to achieve this is by adding two URL parameters to the API:
 
 size : number of records to return
+
 pageNumber: depending on the size, which page of data should be returned
 
 in the users.js route, we would then use these params
