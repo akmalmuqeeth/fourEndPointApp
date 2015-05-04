@@ -29,6 +29,12 @@ mongoimport --db userDB --collection users --type json --file users.json
 
 follow the instructions in manual_db_setup.txt
 
+## Start application 
+
+from the application directory, run
+
+```node server.js```
+
 ## API Reference
 
 ### login
@@ -43,7 +49,7 @@ curl -i -H "Accept: application/json" "http://127.0.0.1:8080/api/files/middlewar
 ### status
 curl -i -H "Accept: application/json" "http://127.0.0.1:8080/api/status"
 
-## Design decisions
+## Technologies used
 
 NodeJS
 
@@ -61,6 +67,8 @@ Mocha - testing
 
 - Its fast
 - Quick to prototype REST Api's
+- Good mongoDB support
+- first made a one file application to quickly prototype the application : ```https://github.com/akmalmuqeeth/codeApp``` , then split this into a modular structure
 
 
 **Why Express JS?** : simple routing, sessions and POST body/ query string parsing.
