@@ -21,7 +21,7 @@ describe('status(url)', function() {
 });
 
 describe('files(url)', function() {
-    it('should return the status of the application', function (done) {
+    it('should return a status of 200 when fetching files', function (done) {
         var app = express();
         router(app);
 
@@ -29,7 +29,7 @@ describe('files(url)', function() {
             var url = 'http://localhost:' + s.address().port + "/api/files/middlewares";
             request(url)
                 .get('/')
-                .expect('{"mongoDB":"connecting"}', done);
+                .expect(200, function() { done(); });
         });
     })
 });
