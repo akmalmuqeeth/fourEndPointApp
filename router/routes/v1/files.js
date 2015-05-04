@@ -5,7 +5,7 @@ var express = require('express')
     , fs = require('fs');
 
 router.get('/:directory', function getFiles(req,res){
-    var location = path.join(__dirname, '../../' + req.params.directory);
+    var location = path.join(__dirname, '../../../' + req.params.directory);
     fs.readdir(location, function (err, files) {
         if (err) {
             logger.debug("error while reading directory " +location+ ". Error: "+  err);
